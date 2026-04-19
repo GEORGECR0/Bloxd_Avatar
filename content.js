@@ -11,8 +11,17 @@ img.style.left = "0px";
 img.style.width = "400px";
 img.style.zIndex = "999999999";
 img.style.pointerEvents = "none";
+img.style.transformOrigin = "bottom left";
 
 document.body.appendChild(img);
+
+function applyZoomCompensation() {
+  const zoom = window.devicePixelRatio;
+  img.style.transform = `scale(${1 / zoom})`;
+}
+
+applyZoomCompensation();
+window.addEventListener("resize", applyZoomCompensation);
 
 navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
   const audioContext = new AudioContext();
@@ -35,7 +44,6 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
 
     volume = volume / data.length;
 
-    // adjust sensitivity here
     if (volume > 15) {
       if (!speaking) {
         speaking = true;
