@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Bloxd Avatar",
+  "version": "1.0",
+  "description": "Made by GE0RGECR",
+  "permissions": ["audioCapture"],
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/image1.png", "assets/image2.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
