@@ -17,7 +17,6 @@ document.body.appendChild(img);
 let avatarSize = 400;
 let micThreshold = 15;
 
-// Apply size safely
 function applySize() {
   img.style.width = avatarSize + "px";
 }
