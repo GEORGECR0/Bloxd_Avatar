@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+
+      background-image: url(assets/Minecraft_Background_8.png);
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 220px;
+    }
+
+    .setting {
+      margin-bottom: 15px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    .value-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      padding: 2px 6px;
+      border-radius: 4px;
+      min-width: 35px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 11px;
+      text-align: center;
+      color: #d3d3d3;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="setting">
+    <div class="row">
+      <span>Avatar Size</span>
+      <span class="value-box" id="sizeValue">400</span>
+    </div>
+    <input type="range" id="size" min="100" max="800" step="10">
+  </div>
+
+  <div class="setting">
+    <div class="row">
+      <span>Mic Threshold</span>
+      <span class="value-box" id="thresholdValue">15</span>
+    </div>
+    <input type="range" id="threshold" min="0" max="100" step="1">
+  </div>
+
+  <div class="footer">
+    Made by: GEORGECR
+  </div>
+
+  <button id="saveBtn">Save Settings</button>
+
+
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
